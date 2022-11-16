@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="oceanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="candidats">
+    <Key>
+      <PropertyRef Name="matricule" />
+    </Key>
+    <Property Name="matricule" Type="Int32" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="prénom" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Téléphone" Type="Int32" />
+    <Property Name="niveau" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Expr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="dernier_emp" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="oceanEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="candidats" EntityType="Self.candidats" />
+  </EntityContainer>
+</Schema>
